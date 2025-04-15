@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="portfolio.css">
     <!-- Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Ajouter dans la section head -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body id="body" onload="preloader()">
 
     <div id="loader">
         <!-- Loader animation here -->
-    </div><4,
+    </div>
     <!-- header section starts  -->
     
     <header class="header">
@@ -209,7 +211,7 @@
             </div>
 
             <div class="box">
-                <img src="images/project3.jpg" alt="Plateforme Webradio">
+                <img src="img/project3.jpg" alt="Plateforme Webradio" width="500" height="300">
                 <div class="content">
                     <h3>Plateforme Webradio</h3>
                     <p>Plateforme technique pour ma webradio incluant API, site et player</p>
@@ -238,32 +240,34 @@
 
         <h1 class="heading"> Ma <span class="underline">Webradio</span> </h1>
 
-        <div class="radio-content">
-            <div class="radio-image">
-                <img src="img/la Radio de L'EnversduDécor.jpg" alt="OneTechAir Radio" width="500" height="500">
-            </div>
-            <div class="radio-info">
-                <h3>OneTechAir Radio</h3>
-                <p>Webradio active depuis plus d'un an sur la plateforme RadioKing</p>
-                <p>Plusieurs émissions originales et une plateforme technique développée par mes soins</p>
-                <p>Participation au Salon de la Radio à Paris en janvier 2025</p>
-                <div class="radio-player">
-                    <!-- Placeholder for RadioKing player embed -->
-                    <div class="player-frame">
-                        <div class="player-controls">
-                            <button class="control-btn play-btn"><i class="fas fa-play"></i></button>
-                            <div class="track-info">
-                                <span class="track-name">OneTechAir Radio</span>
-                                <span class="track-artist">Écoutez en direct</span>
-                            </div>
+       <!-- Remplacez votre section radio par celle-ci -->
+<section class="radio" id="radio">
+    <h1 class="heading"> Ma <span class="underline">Webradio</span> </h1>
+
+    <div class="radio-content">
+        <div class="radio-image">
+            <img src="img/la Radio de L'EnversduDécor.jpg" alt="OneTechAir Radio" width="500" height="500">
+        </div>
+        <div class="radio-info">
+            <h3>OneTechAir Radio</h3>
+            <p>Webradio active depuis plus d'un an sur la plateforme RadioKing</p>
+            <p>Plusieurs émissions originales et une plateforme technique développée par mes soins</p>
+            <p>Participation au Salon de la Radio à Paris en janvier 2025</p>
+            <div class="radio-player highlight-container">
+                <div class="player-frame">
+                    <div class="player-controls">
+                        <button class="control-btn play-btn" id="radioPlayBtn"><i class="fas fa-play"></i></button>
+                        <div class="track-info">
+                            <span class="track-name">OneTechAir Radio</span>
+                            <span class="track-artist">Écoutez en direct</span>
                         </div>
                     </div>
                 </div>
-                <a href="https://fr.welove.radio/radio/la-radio-de-lenversdudecor/" class="btn">Écouter en direct</a>
             </div>
+            <a href="https://fr.welove.radio/radio/la-radio-de-lenversdudecor/" class="btn radio-btn">Écouter en direct</a>
         </div>
-
-    </section>
+    </div>
+</section>
 
     <!-- radio section ends -->
 
@@ -324,13 +328,14 @@
                 </div>
             </div>
 
-            <form action="" class="contact-form">
-                <input type="text" placeholder="Votre nom" class="box">
-                <input type="email" placeholder="Votre email" class="box">
-                <input type="text" placeholder="Sujet" class="box">
-                <textarea name="" class="box" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Envoyer" class="btn">
-            </form>
+            <!-- Remplacez votre balise form par celle-ci -->
+<form action="https://formspree.io/f/votre_identifiant" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Votre nom" class="box" required>
+    <input type="email" name="email" placeholder="Votre email" class="box" required>
+    <input type="text" name="subject" placeholder="Sujet" class="box" required>
+    <textarea name="message" class="box" placeholder="Votre message" cols="30" rows="10" required></textarea>
+    <input type="submit" value="Envoyer" class="btn">
+</form>
         </div>
 
     </section>

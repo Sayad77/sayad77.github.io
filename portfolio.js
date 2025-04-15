@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const projectsContainer = document.querySelector('.projects .box-container');
 
+    // Ajoutez ce code dans votre script
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    
+    // Forcer le rafraîchissement des sections
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        setTimeout(() => {
+            section.style.opacity = '1';
+            section.classList.add('animate__animated', 'animate__fadeIn');
+        }, 100);
+    });
+});
+
     // Animation de chargement des sections
     const observerOptions = {
         root: null,
@@ -111,6 +125,25 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         initPortfolio();
     }
+});
+// Ajouter dans votre fichier JavaScript ou dans une balise script à la fin du document
+document.querySelector('.download-cv').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Cibler le contenu du CV
+    const cvContent = document.querySelector('.cv-content');
+    
+    // Options pour le PDF
+    const options = {
+        margin: 10,
+        filename: 'CV_Madarbukus_Sayadali.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    
+    // Générer le PDF
+    html2pdf().set(options).from(cvContent).save();
 });
 
 // Styles à ajouter dans votre CSS pour compléter les interactions
