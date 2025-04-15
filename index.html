@@ -19,10 +19,17 @@
 </head>
 
 <body id="body" onload="preloader()">
+    
+      
 
-    <div id="loader">
-        <!-- Loader animation here -->
+   <!-- Loader avec animation de spectre audio -->
+<div id="loader">
+    <div class="spectrum-loader">
+        <span></span><span></span><span></span><span></span><span></span>
     </div>
+    <p class="loader-text">Chargement de OneTechAir...</p>
+</div>
+
     <!-- header section starts  -->
     
     <header class="header">
@@ -60,7 +67,10 @@
 
     <!-- home section starts  -->
     <section class="home" id="home">
-
+        <p class="intro-message animate__animated animate__fadeInDown">
+            "Bienvenue dans mon univers numérique, entre code, créativité et ondes sonores."
+        </p>
+        
         <div class="content">
             <h3><span class="underline">Madarbukus</span> <span class="underline">Sayadali</span></h3>
             <p>Je suis <span class="typing-text">Développeur Web</span></p>
@@ -237,37 +247,37 @@
     <!-- radio section starts -->
 
     <section class="radio" id="radio">
-
         <h1 class="heading"> Ma <span class="underline">Webradio</span> </h1>
-
-       <!-- Remplacez votre section radio par celle-ci -->
-<section class="radio" id="radio">
-    <h1 class="heading"> Ma <span class="underline">Webradio</span> </h1>
-
-    <div class="radio-content">
-        <div class="radio-image">
-            <img src="img/la Radio de L'EnversduDécor.jpg" alt="OneTechAir Radio" width="500" height="500">
-        </div>
-        <div class="radio-info">
-            <h3>OneTechAir Radio</h3>
-            <p>Webradio active depuis plus d'un an sur la plateforme RadioKing</p>
-            <p>Plusieurs émissions originales et une plateforme technique développée par mes soins</p>
-            <p>Participation au Salon de la Radio à Paris en janvier 2025</p>
-            <div class="radio-player highlight-container">
-                <div class="player-frame">
+    
+        <div class="radio-content">
+            <div class="radio-image">
+                <img src="img/la Radio de L'EnversduDécor.jpg" alt="OneTechAir Radio" width="300" height="300">
+            </div>
+            <div class="radio-info">
+                <h3>OneTechAir Radio</h3>
+                <p>Webradio active depuis plus d'un an sur la plateforme RadioKing</p>
+                <p>Plusieurs émissions originales et une plateforme technique développée par mes soins</p>
+                <p>Participation au Salon de la Radio à Paris en janvier 2025</p>
+                
+                <!-- Bouton lecture -->
+                <div class="radio-player highlight-container">
                     <div class="player-controls">
-                        <button class="control-btn play-btn" id="radioPlayBtn"><i class="fas fa-play"></i></button>
-                        <div class="track-info">
-                            <span class="track-name">OneTechAir Radio</span>
-                            <span class="track-artist">Écoutez en direct</span>
-                        </div>
+                        <button class="control-btn play-btn" id="radioPlayBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
                     </div>
                 </div>
+    
+                <!-- Bouton lien direct -->
+                <a href="https://fr.welove.radio/radio/la-radio-de-lenversdudecor/" target="_blank" class="btn radio-btn">
+                    Écouter en direct
+                </a>
             </div>
-            <a href="https://fr.welove.radio/radio/la-radio-de-lenversdudecor/" class="btn radio-btn">Écouter en direct</a>
         </div>
-    </div>
-</section>
+    </section>
+    
+
+       
 
     <!-- radio section ends -->
 
@@ -275,30 +285,31 @@
 
     <section class="testimonials" id="testimonials">
         <h1 class="heading"> <span class="underline">Témoignages</span> </h1>
-
+    
         <div class="testimonial-container">
             <div class="testimonial">
-                <img src="img/Témoignage.jpg"Témoignages" width="400" height="400">
+                <img src="img/Témoignage.jpg" alt="Témoignage 1" width="300" height="300">
                 <div class="testimonial-content">
                     <p>"Madarbukus a fait preuve d'une grande motivation et d'une capacité d'adaptation impressionnante dans sa reconversion professionnelle."</p>
                 </div>
                 <div class="testimonial-author">
-                    <h3>Mme Dessart Professeur en Développement Web</h3>
-                    <p>My Digital School</p>
+                    <h3>Mme Dessart</h3>
+                    <p>Professeure Développement Web - My Digital School</p>
                 </div>
             </div>
-
+    
             <div class="testimonial">
                 <div class="testimonial-content">
                     <p>"Son parcours professionnel antérieur lui apporte une perspective unique dans la résolution de problèmes techniques et dans la gestion de projets."</p>
                 </div>
                 <div class="testimonial-author">
                     <h3>Axel Diot</h3>
-                    <p>Bachelor Marketing Digital</p>
+                    <p>Étudiant Bachelor Marketing Digital</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- testimonials section ends -->
 
     <!-- contact section starts -->
@@ -309,25 +320,24 @@
 
         <div class="contact-container">
             <div class="contact-info">
-                <img src="img/contact.jpg" contact" width="400" height="400">
                 <div class="info-item">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope fa-2x"></i>
                     <p>dildilma.azari@gmail.com</p>
                 </div>
                 <div class="info-item">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone fa-2x"></i>
                     <p>06.58.20.18.84</p>
                 </div>
                 <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><br>77000 Melun</p>
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>77000 Melun</p>
                 </div>
                 <div class="info-item">
-                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-briefcase fa-2x"></i>
                     <p>OneTechAir</p>
                 </div>
             </div>
-
+            
             <!-- Remplacez votre balise form par celle-ci -->
 <form action="https://formspree.io/f/votre_identifiant" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Votre nom" class="box" required>
@@ -448,8 +458,15 @@
 
         // Preloader
         function preloader() {
-            document.querySelector("#loader").style.display = "none";
-        }
+            setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.8s ease";
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 800);
+    }, 2500); // attendre 2,5 secondes avant de masquer
+}
     </script>
 
 </body>

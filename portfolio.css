@@ -221,6 +221,17 @@ body.dark-theme .header {
     position: relative;
 }
 
+.intro-message {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+
 .home .content {
     text-align: center;
     margin-bottom: 2rem;
@@ -466,39 +477,27 @@ body.dark-theme .about .box-container .box {
     gap: 2rem;
     width: 100%;
     max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.radio h1.heading {
+    text-align: center;
+    width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-    .radio-content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    
-    .radio-image, .radio-info {
-        width: 48%;
-    }
+
+.radio-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.highlight-container {
-    position: relative;
+.radio-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.highlight-container::before {
-    content: "Cliquez pour écouter";
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--accent-color);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-.radio-btn {
-    margin-top: 20px;
-}
 
 .testimonials {
     display: flex;
@@ -512,30 +511,32 @@ body.dark-theme .about .box-container .box {
     margin: 0 auto;
 }
 
-.testimonials .box-container {
+.testimonial-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.testimonials .box {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    gap: 2rem;
     text-align: center;
-    max-width: 600px;
-    width: 100%;
 }
 
-.testimonials .box i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+.testimonial img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    height: auto;
 }
+
+.testimonial-content p {
+    font-style: italic;
+    color: #444;
+    max-width: 600px;
+}
+
+.testimonial-author h3 {
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
 /* Ajoutez ou modifiez ces styles dans votre fichier portfolio.css */
 .contact-container {
     display: flex;
@@ -547,13 +548,28 @@ body.dark-theme .about .box-container .box {
     margin: 0 auto;
 }
 
+.contact h1.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .contact-info {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
+
+.contact-info .info-item {
+    text-align: center;
+}
+
+.contact-info .info-item i {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
 
 .contact-form {
     width: 100%;
@@ -616,4 +632,52 @@ body.dark-theme .about .box-container .box {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.spectrum-loader {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+    height: 50px;
+}
+
+.spectrum-loader span {
+    width: 8px;
+    height: 20px;
+    background: #00a8e8;
+    display: inline-block;
+    animation: equalizer 1s infinite ease-in-out;
+}
+
+.spectrum-loader span:nth-child(1) { animation-delay: 0s; }
+.spectrum-loader span:nth-child(2) { animation-delay: 0.1s; }
+.spectrum-loader span:nth-child(3) { animation-delay: 0.2s; }
+.spectrum-loader span:nth-child(4) { animation-delay: 0.3s; }
+.spectrum-loader span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes equalizer {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+}
+
+.loader-text {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: #ffffffcc;
+    letter-spacing: 1px;
 }

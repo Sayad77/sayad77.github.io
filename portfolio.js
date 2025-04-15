@@ -127,8 +127,27 @@ window.addEventListener('load', function() {
     }
 });
 // Ajouter dans votre fichier JavaScript ou dans une balise script à la fin du document
+document.getElementById('cvButton').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('cvModal').style.display = 'block';
+});
+
 document.querySelector('.download-cv').addEventListener('click', function(e) {
     e.preventDefault();
+
+    const cvContent = document.querySelector('.cv-content');
+
+    const options = {
+        margin: 10,
+        filename: 'CV_Madarbukus_Sayadali.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf().set(options).from(cvContent).save();
+});
+
     
     // Cibler le contenu du CV
     const cvContent = document.querySelector('.cv-content');
@@ -144,7 +163,7 @@ document.querySelector('.download-cv').addEventListener('click', function(e) {
     
     // Générer le PDF
     html2pdf().set(options).from(cvContent).save();
-});
+
 
 // Styles à ajouter dans votre CSS pour compléter les interactions
 // .project-filters {
