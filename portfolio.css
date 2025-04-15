@@ -681,3 +681,49 @@ body.dark-theme .about .box-container .box {
     color: #ffffffcc;
     letter-spacing: 1px;
 }
+.terminal-intro {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--light-color);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.typing-line {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.terminal-symbol {
+    color: var(--accent-color);
+}
+
+.subtext {
+    font-style: italic;
+    color: #ccc;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Fond animé avec ondes radio */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/symphony.png") repeat;
+    opacity: 0.05;
+    animation: move-bg 30s linear infinite;
+    z-index: 0;
+}
+
+@keyframes move-bg {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+}

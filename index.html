@@ -15,7 +15,20 @@
     <!-- Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Ajouter dans la section head -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+    new Typed('.typed-intro', {
+    strings: [
+        "Madarbukus Sayadali - Développeur Web & Radio Créateur",
+        "Expertise en Code, Contenu & Communication",
+        "Bienvenue dans mon univers digital"
+    ],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+});
+
+</script>
 </head>
 
 <body id="body" onload="preloader()">
@@ -72,6 +85,14 @@
         </p>
         
         <div class="content">
+            <div class="terminal-intro">
+                <div class="typing-line">
+                    <span class="terminal-symbol">$</span>
+                    <span class="typed-intro"></span>
+                </div>
+                <p class="subtext">"Coder des idées, diffuser des valeurs, innover par le digital."</p>
+            </div>
+            
             <h3><span class="underline">Madarbukus</span> <span class="underline">Sayadali</span></h3>
             <p>Je suis <span class="typing-text">Développeur Web</span></p>
             <a href="#" class="btn" id="cvButton">Mon CV</a>
@@ -339,7 +360,7 @@
             </div>
             
             <!-- Remplacez votre balise form par celle-ci -->
-<form action="https://formspree.io/f/votre_identifiant" method="POST" class="contact-form">
+<form action=https://formspree.io/f/moveborl method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Votre nom" class="box" required>
     <input type="email" name="email" placeholder="Votre email" class="box" required>
     <input type="text" name="subject" placeholder="Sujet" class="box" required>
@@ -468,6 +489,7 @@
     }, 2500); // attendre 2,5 secondes avant de masquer
 }
     </script>
+
 
 </body>
 

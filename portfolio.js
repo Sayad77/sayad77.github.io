@@ -132,21 +132,6 @@ document.getElementById('cvButton').addEventListener('click', function(e) {
     document.getElementById('cvModal').style.display = 'block';
 });
 
-document.querySelector('.download-cv').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const cvContent = document.querySelector('.cv-content');
-
-    const options = {
-        margin: 10,
-        filename: 'CV_Madarbukus_Sayadali.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().set(options).from(cvContent).save();
-});
 
     
     // Cibler le contenu du CV
